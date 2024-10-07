@@ -1,7 +1,9 @@
 ---
 - hosts: web
+  vars:
+    nginx_version: "1.18.0"
   tasks:
     - name: Install nginx
       apt:
-        name: nginx
+        name: "nginx={{ nginx_version }}"
         state: present
