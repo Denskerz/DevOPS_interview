@@ -3,7 +3,7 @@
   vars:
     nginx_version: "1.18.0"
   tasks:
-    - name: Nginx
+    - name: Delete nginx
       apt:
         name: "nginx={{ nginx_version }}"
         state: present
